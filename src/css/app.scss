@@ -1,0 +1,19 @@
+// app global css in SCSS form
+@mixin background-style($image-url) {
+  background-image: url($image-url);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-color: #087bf6;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+@mixin desktop-style($image-url){
+  @include background-style($image-url);
+  background-position: top;
+  background-size: contain;
+}
+
+.desktop-background {
+  @include desktop-style('src/assets/Lidl.png');
+}
